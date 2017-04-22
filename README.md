@@ -1,6 +1,6 @@
 # npmtest-ios-sim
 
-#### basic test coverage for  [ios-sim (v5.0.13)](https://github.com/phonegap/ios-sim#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-ios-sim.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-ios-sim) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-ios-sim.svg)](https://travis-ci.org/npmtest/node-npmtest-ios-sim)
+#### basic test coverage for  ios-sim (v5.0.13)  [![npm package](https://img.shields.io/npm/v/npmtest-ios-sim.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-ios-sim) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-ios-sim.svg)](https://travis-ci.org/npmtest/node-npmtest-ios-sim)
 
 #### launch iOS apps into the iOS Simulator from the command line (Xcode 7.0+)
 
@@ -35,73 +35,49 @@
 ```json
 
 {
-    "author": {
-        "name": "Shazron Abdullah"
+    "name": "ios-sim",
+    "version": "5.0.13",
+    "preferGlobal": "true",
+    "description": "launch iOS apps into the iOS Simulator from the command line (Xcode 7.0+)",
+    "main": "ios-sim.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/phonegap/ios-sim"
     },
+    "engines": {
+        "node": ">=0.10.0"
+    },
+    "keywords": [
+        "ios-sim",
+        "iOS Simulator"
+    ],
     "bin": {
         "ios-sim": "./bin/ios-sim"
     },
     "bugs": {
         "url": "https://github.com/phonegap/ios-sim/issues"
     },
+    "author": "Shazron Abdullah",
+    "license": "MIT",
     "dependencies": {
-        "bplist-parser": "^0.0.6",
-        "nopt": "1.0.9",
         "plist": "^1.2.0",
-        "simctl": "^0.1.0"
+        "simctl": "^0.1.0",
+        "nopt": "1.0.9",
+        "bplist-parser": "^0.0.6"
     },
-    "description": "launch iOS apps into the iOS Simulator from the command line (Xcode 7.0+)",
     "devDependencies": {
         "jasmine-node": "^1.14.5",
         "jscs": "^2.11.0",
         "jshint": "^2.9.1"
     },
-    "directories": {},
-    "dist": {
-        "shasum": "e5749cf567718f4024f6d622e88a2bf7ea9472f1",
-        "tarball": "https://registry.npmjs.org/ios-sim/-/ios-sim-5.0.13.tgz"
-    },
-    "engines": {
-        "node": ">=0.10.0"
-    },
-    "gitHead": "31d6083642674422860227ef694ec1d2533729c9",
-    "homepage": "https://github.com/phonegap/ios-sim#readme",
-    "keywords": [
-        "ios-sim",
-        "iOS Simulator"
-    ],
-    "license": "MIT",
-    "main": "ios-sim.js",
-    "maintainers": [
-        {
-            "name": "macdonst"
-        },
-        {
-            "name": "purplecabbage"
-        },
-        {
-            "name": "shazron"
-        },
-        {
-            "name": "stevegill"
-        }
-    ],
-    "name": "ios-sim",
-    "optionalDependencies": {},
-    "preferGlobal": "true",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/phonegap/ios-sim.git"
-    },
     "scripts": {
-        "jasmine": "jasmine-node --captureExceptions --color spec",
-        "jscs": "jscs src ./ios-sim.js",
+        "test": "npm run jasmine",
+        "posttest": "npm run jshint",
         "jshint": "jshint src ./ios-sim.js",
         "postjshint": "npm run jscs",
-        "posttest": "npm run jshint",
-        "test": "npm run jasmine"
-    },
-    "version": "5.0.13"
+        "jscs": "jscs src ./ios-sim.js",
+        "jasmine": "jasmine-node --captureExceptions --color spec"
+    }
 }
 ```
 
